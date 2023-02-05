@@ -11,7 +11,7 @@ Bibliotecas utilizadas:
 - csv
 - pandas
 
-Bot verifica se os CNPJs contidos no arquivo cnpj.csv possui recido da transmissão
-caso não tenha é salvo o cnpj no arquivo erro.csv.
+Bot verifica se os CNPJs contidos no arquivo cnpj.csv possui recibo da transmissão
+caso não exista é salvo o cnpj no arquivo erro.csv.
 
 Simples e funcional.
