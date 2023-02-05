@@ -1,7 +1,8 @@
 # BotReceitanetBX
 
 Automação para pesquisa de período de escrituração no sistema Receitanet BX.
-Bibliotecas utilizadas
+
+Bibliotecas utilizadas:
 
 - pyautogui
 - tkinter
@@ -10,4 +11,7 @@ Bibliotecas utilizadas
 - csv
 - pandas
 
+Bot verifica se os CNPJ contidos no arquivo cnpj.csv possui recido da transmissão
+caso não tenha é salvo o cnpj no arquivo erro.csv.
 
+Simples e funcional.
