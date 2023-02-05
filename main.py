@@ -78,13 +78,14 @@ for i in range(len(df.index)):
     texto_formatado = texto.upper()
     time.sleep(3)
     if("NENHUM" in texto_formatado):
-        print("deu erro bora salvar CNPJ no arquivo")
+        print("Deu erro! bora salvar CNPJ no arquivo e ir para o proxímo caso exista")
         cnpj = [cpf_cnpj]
         with open('erro.csv', 'a') as csvfile:
             writer_object = writer(csvfile)
             writer_object.writerow(cnpj)
-            csvfile.close() 
+            csvfile.close()
+        print("CNPJ salvo no arquivo, bora para o proxímo caso exista") 
     else:
-        print("Tudo certo bora pesquisar outro CNPJ")
+        print("Tudo certo! Se existir bora pesquisar outro CNPJ")
     time.sleep(3)
     bot.hotkey('ctrl','w')
