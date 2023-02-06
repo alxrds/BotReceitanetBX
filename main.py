@@ -2,7 +2,7 @@ import pyautogui as bot
 from tkinter import Tk
 import time
 import datetime
-from csv import writer 
+from csv import writer
 import pandas as pd
 
 data_atual = datetime.datetime.now()
@@ -19,6 +19,12 @@ df = pd.read_csv('cnpj.csv')
 data_inicial = '01' + str(mes_pesquisa) +''+ str(ano_pesquisa)
 data_final = '31' + str(mes_pesquisa) +''+ str(ano_pesquisa)
 
+def tacaTab(number):
+    count = 0
+    while (count < number):
+        bot.press('tab')                            
+        count += 1
+
 for i in range(len(df.index)):
     cpf_cnpj = str(df.iloc[i,0])
     print('Iniciando Tarefa CNPJ ' + str(cpf_cnpj))
@@ -29,28 +35,19 @@ for i in range(len(df.index)):
     time.sleep(3)
     bot.press('enter')
     time.sleep(5)
-    bot.press('tab')
-    bot.press('tab')
+    tacaTab(2)
     bot.press('down')
     bot.press('tab')
     bot.press('down')
     bot.press('tab')
+    time.sleep(3)
+    bot.write(cpf_cnpj) 
+    time.sleep(3)
+    tacaTab(4)
     time.sleep(5)
-    bot.write(cpf_cnpj)
-    bot.press('tab')
-    bot.press('tab')
-    bot.press('tab')
-    bot.press('tab')
-    bot.press('enter')
+    bot.press('enter')  
     time.sleep(5)
-    bot.press('tab')
-    bot.press('tab')
-    bot.press('tab')
-    bot.press('tab')
-    bot.press('tab')
-    bot.press('tab')
-    bot.press('tab')
-    bot.press('tab')
+    tacaTab(8)
     bot.press('down')
     bot.press('tab')
     bot.press('down')
