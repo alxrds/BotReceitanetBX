@@ -74,6 +74,7 @@ for i in range(len(df.index)):
     texto = root.clipboard_get()
     texto_formatado = texto.upper()
     time.sleep(3)
+    
     if("NENHUM" in texto_formatado):
         print("Deu erro! bora salvar CNPJ no arquivo e ir para o proxímo caso exista")
         cnpj = [cpf_cnpj]
