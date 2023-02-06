@@ -19,7 +19,7 @@ df = pd.read_csv('cnpj.csv')
 data_inicial = '01' + str(mes_pesquisa) +''+ str(ano_pesquisa)
 data_final = '31' + str(mes_pesquisa) +''+ str(ano_pesquisa)
 
-def tacaTab(number):
+def insere_tab(number):
     count = 0
     while (count < number):
         bot.press('tab')                            
@@ -35,7 +35,7 @@ for i in range(len(df.index)):
     time.sleep(3)
     bot.press('enter')
     time.sleep(5)
-    tacaTab(2)
+    insere_tab(2)
     bot.press('down')
     bot.press('tab')
     bot.press('down')
@@ -43,11 +43,11 @@ for i in range(len(df.index)):
     time.sleep(3)
     bot.write(cpf_cnpj) 
     time.sleep(3)
-    tacaTab(4)
+    insere_tab(4)
     time.sleep(5)
     bot.press('enter')  
     time.sleep(5)
-    tacaTab(8)
+    insere_tab(8)
     bot.press('down')
     bot.press('tab')
     bot.press('down')
